@@ -1,0 +1,25 @@
+"""Configuration for SCFApp Log Alerts"""
+import os
+
+ACS_CONNECTION_STRING = os.getenv("ACS_CONNECTION_STRING")
+ACS_SENDER_ADDRESS = os.getenv("ACS_SENDER_ADDRESS")
+
+APP_NAME = os.getenv("APP_NAME", 'AlmaRSA-PSB')
+AUTH_LOGIN_ENCODED = os.getenv("AUTH_LOGIN_ENCODED")
+API_HOST = os.getenv("API_HOST")
+VFS_REPORTS_PATH = f"/{APP_NAME}/reports/"
+
+HANDLER_NAME = os.getenv("HANDLER_NAME", "RequestHandler")
+
+TO_EMAIL_STR = os.getenv("TO_EMAIL")
+CC_EMAIL_BASE_STR = os.getenv("CC_EMAIL_BASE")
+CC_EMAIL_ITEMSHANDLER_STR = os.getenv("CC_EMAIL_ITEMSHANDLER")
+CC_EMAIL_REQUESTHANDLER_STR = os.getenv("CC_EMAIL_REQUESTHANDLER")
+
+TEMP_DIR = "/tmp"
+
+DEFAULT_LOG_FILENAME = os.getenv("DEFAULT_LOG_FILENAME", "applog.log")
+VFS_LOG_PATH_TEMPLATE = os.getenv("VFS_LOG_PATH_TEMPLATE", "/{app_name}/reports/applog.log")
+CC_EMAIL_LIST_STR = os.getenv("CC_EMAIL_LIST")
+DEBUG_LOG_FILE_NAME_OVERRIDE = os.getenv("DEBUG_LOG_FILE_NAME_OVERRIDE")
+REPORT_HOUR_THRESHOLD = int(os.getenv("REPORT_HOUR_THRESHOLD", 7))

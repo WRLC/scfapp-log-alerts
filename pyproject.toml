@@ -1,0 +1,20 @@
+[project]
+name = "scfapp-log-alerts"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Tom Boone",email = "boone@wrlc.org"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "azure-functions (>=1.23.0,<2.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "azure-communication-email (>=1.0.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

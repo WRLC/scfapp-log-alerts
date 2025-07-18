@@ -7,7 +7,7 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "azure-functions (>=1.23.0,<2.0.0)",
     "azure-communication-email (>=1.0.0,<2.0.0)",

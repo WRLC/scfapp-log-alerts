@@ -8,6 +8,7 @@ bp = func.Blueprint()
 
 ERRORS_NCRON = config.ERRORS_NCRON
 ERROR_TYPES = config.ERROR_TYPES
+DISABLE_EMAIL = config.DISABLE_EMAIL
 
 
 # noinspection PyUnusedLocal
@@ -24,6 +25,9 @@ def ErrorLogAlert(mytimer: func.TimerRequest) -> None:
     Args:
         mytimer (func.TimerRequest): timer trigger
     """
+    if DISABLE_EMAIL:  # If email is disabled, skip
+        return
+
     errors_service: ErrorsService = ErrorsService()  # Instance of errors service
 
     yesterday_filestring: str = errors_service.set_filestring()  # Yesterday's date string

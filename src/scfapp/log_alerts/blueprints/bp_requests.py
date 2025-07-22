@@ -7,6 +7,7 @@ from src.scfapp.log_alerts.services.requests_service import RequestsService
 bp: func.Blueprint = func.Blueprint()
 
 REQUESTS_NCRON = config.REQUESTS_NCRON
+DISABLE_EMAIL = config.DISABLE_EMAIL
 
 
 # noinspection PyUnusedLocal,PyTypeChecker
@@ -24,6 +25,9 @@ def RequestLogAlert(applog_timer: func.TimerRequest) -> None:
         applog_timer (func.TimerRequest): timer trigger
 
     """
+    if DISABLE_EMAIL:  # If email is disabled, skip
+        return
+
     requests_service = RequestsService()  # Instance of requests service
     scfapp_requests: list[dict] | None = requests_service.get_requests()  # Get requests
 

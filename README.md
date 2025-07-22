@@ -42,6 +42,7 @@ This application is configured entirely through environment variables. For local
 | `ERRORS_NCRON`                 | The NCronTab expression for the error alert schedule (e.g., `0 0 5 * * *`). |
 | `REQUESTS_NCRON`               | The NCronTab expression for the request alert schedule.                  |
 | `*_TO_EMAIL_STR` / `*_CC_EMAIL_STR` | Comma-separated strings of email addresses for various alerts.           |
+| `DISABLE_EMAIL`                | Disable email reports (e.g., in non-production deployment slot)          |
 
 ## Local Development
 

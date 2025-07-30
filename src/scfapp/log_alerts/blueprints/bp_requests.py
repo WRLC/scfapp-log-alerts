@@ -1,13 +1,10 @@
 """ Azure Function Blueprint for SCFApp Requests Log Alert. """
 import azure.functions as func
 
-import src.scfapp.log_alerts.config as config
+from src.scfapp.log_alerts.config import REQUESTS_NCRON, DISABLE_EMAIL
 from src.scfapp.log_alerts.services.requests_service import RequestsService
 
 bp: func.Blueprint = func.Blueprint()
-
-REQUESTS_NCRON = config.REQUESTS_NCRON
-DISABLE_EMAIL = config.DISABLE_EMAIL
 
 
 # noinspection PyUnusedLocal,PyTypeChecker

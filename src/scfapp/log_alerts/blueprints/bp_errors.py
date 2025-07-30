@@ -1,14 +1,10 @@
 """Blueprint for SCFApp Error Alerts"""
 import azure.functions as func
 
-import src.scfapp.log_alerts.config as config
+from src.scfapp.log_alerts.config import ERRORS_NCRON, ERROR_TYPES, DISABLE_EMAIL
 from src.scfapp.log_alerts.services.errors_service import ErrorsService
 
 bp = func.Blueprint()
-
-ERRORS_NCRON = config.ERRORS_NCRON
-ERROR_TYPES = config.ERROR_TYPES
-DISABLE_EMAIL = config.DISABLE_EMAIL
 
 
 # noinspection PyUnusedLocal

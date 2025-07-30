@@ -11,12 +11,8 @@ from azure.storage.fileshare import ShareFileClient
 # noinspection PyProtectedMember
 from azure.storage.fileshare._download import StorageStreamDownloader
 
-import src.scfapp.log_alerts.config as config
+from src.scfapp.log_alerts.config import STORAGE_CONNECTION_STRING, SHARE_NAME, REPORT_PATH
 from src.scfapp.log_alerts.services.email_service import EmailService
-
-STORAGE_CONNECTION_STRING: str = config.STORAGE_CONNECTION_STRING
-SHARE_NAME: str = config.SHARE_NAME
-REPORT_PATH: list[str] = config.REPORT_PATH
 
 
 # noinspection PyMethodMayBeStatic

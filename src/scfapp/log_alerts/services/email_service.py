@@ -3,10 +3,7 @@ import logging
 
 from azure.communication.email import EmailClient
 
-import src.scfapp.log_alerts.config as config
-
-ACS_CONNECTION_STRING = config.ACS_CONNECTION_STRING
-ACS_SENDER_ADDRESS = config.ACS_SENDER_ADDRESS
+from src.scfapp.log_alerts.config import ACS_CONNECTION_STRING, ACS_SENDER_ADDRESS
 
 
 # noinspection PyMethodMayBeStatic,PyProtectedMember

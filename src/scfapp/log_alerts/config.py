@@ -15,7 +15,7 @@ ACS_CONNECTION_STRING: str = os.environ.get("ACS_CONNECTION_STRING")
 ACS_SENDER_ADDRESS: str = os.environ.get("ACS_SENDER_ADDRESS")
 
 # Requests recipients
-REQUESTS_TO_EMAIL_STR: str | None = os.environ.get("REQUESTS_TO_EMAIL_STR")
+REQUESTS_TO_EMAIL_STR: str = os.environ.get("REQUESTS_TO_EMAIL_STR")
 REQUESTS_CC_EMAIL_BASE_STR: str | None = None
 
 if os.environ.get("REQUESTS_CC_EMAIL_BASE_STR") and os.environ.get("REQUESTS_CC_EMAIL_BASE_STR") != "":

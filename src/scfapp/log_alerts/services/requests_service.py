@@ -5,18 +5,15 @@ from zoneinfo import ZoneInfo
 
 from azure.core.exceptions import HttpResponseError
 from azure.identity import DefaultAzureCredential
-from azure.monitor.query import LogsQueryClient, LogsQueryStatus, LogsQueryResult, LogsQueryPartialResult, LogsTable, \
-    LogsQueryError
+from azure.monitor.query import (
+    LogsQueryClient, LogsQueryStatus, LogsQueryResult, LogsQueryPartialResult, LogsTable, LogsQueryError
+)
 from pandas import DataFrame
 
-import src.scfapp.log_alerts.config as config
+from src.scfapp.log_alerts.config import (
+    LOGS_RESOURCE_ID, REQUEST_TYPES, REQUESTS_TO_EMAIL_STR, REQUESTS_CC_EMAIL_BASE_STR
+)
 from src.scfapp.log_alerts.services.email_service import EmailService
-
-LOGS_RESOURCE_ID: str = config.LOGS_RESOURCE_ID  # Application Insights workspace ID
-REQUEST_TYPES: list[dict] = config.REQUEST_TYPES  # Request types to check
-
-REQUESTS_TO_EMAIL_STR = config.REQUESTS_TO_EMAIL_STR  # Email recipients
-REQUESTS_CC_EMAIL_BASE_STR = config.REQUESTS_CC_EMAIL_BASE_STR  # Email CC recipients
 
 
 # noinspection PyMethodMayBeStatic
@@ -166,7 +163,9 @@ class RequestsService:
             to_recipients_list: list[str] = email_service.create_email_recipients(REQUESTS_TO_EMAIL_STR)  # Email To
 
             if REQUESTS_CC_EMAIL_BASE_STR:
-                cc_list_final: list[str] | None = email_service.create_email_recipients(REQUESTS_CC_EMAIL_BASE_STR)  # Email CC
+                cc_list_final: list[str] | None = email_service.create_email_recipients(  # Email CC
+                    REQUESTS_CC_EMAIL_BASE_STR
+                )
             else:
                 cc_list_final = None
 

@@ -93,7 +93,7 @@ ERROR_TYPES: list[dict] = [
         'cc': IH_ERRORS_CC_EMAIL_STR
     },
     {
-        'type': 'LoanRequestHandler',
+        'type': 'LoanReturnedHandler',
         'to': LRH_ERRORS_TO_EMAIL_STR,
         'cc': LRH_ERRORS_CC_EMAIL_STR
     },

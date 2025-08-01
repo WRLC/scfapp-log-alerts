@@ -20,7 +20,7 @@ from src.scfapp.log_alerts.services.email_service import EmailService
 class RequestsService:
     """ Service for parsing request data """
     def __init__(self):
-        self.request_types: list[dict] = config.REQUEST_TYPES
+        self.request_types: list[dict] = REQUEST_TYPES
 
     def get_requests(self) -> DataFrame | None:
         """

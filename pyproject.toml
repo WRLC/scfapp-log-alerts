@@ -12,7 +12,7 @@ dependencies = [
     "azure-functions (>=1.23.0,<2.0.0)",
     "azure-communication-email (>=1.0.0,<2.0.0)",
     "azure-identity (>=1.23.0,<2.0.0)",
-    "azure-monitor-query (>=1.4.1,<2.0.0)",
+    "azure-monitor-query (>=2.0.0,<3.0.0)",
     "pandas (>=2.3.0,<3.0.0)",
     "azure-storage-file-share (>=12.21.0,<13.0.0)"
 ]

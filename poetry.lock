@@ -104,20 +104,20 @@ azure-core = ">=1.32.0"
 
 [[package]]
 name = "azure-monitor-query"
-version = "1.4.1"
-description = "Microsoft Azure Monitor Query Client Library for Python"
+version = "2.0.0"
+description = "Microsoft Corporation Azure Monitor Query Client Library for Python"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "azure_monitor_query-1.4.1-py3-none-any.whl", hash = "sha256:192c5d8efec48b434f803aa3850ce73b869975507a12b3a823012fc100056ac0"},
-    {file = "azure_monitor_query-1.4.1.tar.gz", hash = "sha256:71824e2b577d25df0d3bebbbb054c06a1ae3ebcb91831a9bac0bb344d0addf68"},
+    {file = "azure_monitor_query-2.0.0-py3-none-any.whl", hash = "sha256:8f52d581271d785e12f49cd5aaa144b8910fb843db2373855a7ef94c7fc462ea"},
+    {file = "azure_monitor_query-2.0.0.tar.gz", hash = "sha256:7b05f2fcac4fb67fc9f77a7d4c5d98a0f3099fb73b57c69ec1b080773994671b"},
 ]
 
 [package.dependencies]
-azure-core = ">=1.28.0"
-isodate = ">=0.6.0"
-typing-extensions = ">=4.0.1"
+azure-core = ">=1.30.0"
+isodate = ">=0.6.1"
+typing-extensions = ">=4.6.0"
 
 [[package]]
 name = "azure-storage-file-share"
@@ -891,4 +891,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "1bb55771bc2b97f5325f70be789d8cdc129d72d5cf3bd38cb18233c322b808c9"
+content-hash = "29d7500ae3d492f37d2aae93553edbd00c5d3bcfed621784a59d6e8e093f6419"
